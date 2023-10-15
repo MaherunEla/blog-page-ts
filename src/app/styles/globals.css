@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-size: 1rem;
+    box-sizing: border-box;
+    position:relative;
+    overflow-x:hidden;
+    background:white;
+    @apply font-sen;
+   
+
+  }
+
+  .display{
+    @apply  font-bold text-black text-2xl md:text-3xl lg:text-[56px] xl:leading-[64px] lg:-tracking-[2px];
+  }
+  h1{
+    @apply  font-sen text-black font-bold text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl xl:leading-[64px] lg:-tracking-[2px];
+  }
+  h2{
+    @apply font-sen text-black font-bold text-xl sm:text-2xl lg:text-4xl xl:leading-[48px] lg:-tracking-[2px];
+  }
+  h3{
+    @apply font-sen text-black font-bold text-base lg:text-xl xl:text-[28px] leading-10 lg:-tracking-[1px];
+  }
+  h4{
+    @apply font-sen text-black font-bold text-base md:text-xl lg:text-2xl leading-8  ;
+  }
+  h5{
+    @apply text-black  font-bold text-xl leading-8;
+  }
+  h6{
+    @apply font-bold text-black text-base leading-6 ;
+  }
+  .b1{
+    @apply font-inter text-black font-normal text-sm md:text-base leading-7;
+  }
+  .bg-style{
+    @apply bg-cover bg-center bg-no-repeat;
+  }
+  .sb{
+    @apply border border-red-600;
+  }
+  .button{
+    @apply py-4 px-12 font-bold font-sen text-lg leading-6 ;
+  }
+  .p_text{
+    @apply font-inter text-black text-sm lg:text-base font-medium lg:tracking-[3px] leading-5 uppercase;
+  }
+  p{
+    @apply font-inter text-mediumgray text-base font-normal leading-7;
+  }
+  .l1{
+    @apply font-inter text-black  text-sm font-medium leading-10;
+  }
+}
+
+.container {
+  margin: 0 auto;
+  width: calc(100% - 40px);
+  max-width:1280px;
+
+}
+@media (min-width:640px){
+  .container{
+    width:calc(100% - 60px);
+  }
+}
+@media (min-width:960px){
+  .container{
+    width:calc(100% - 80px);
+  }
+}
