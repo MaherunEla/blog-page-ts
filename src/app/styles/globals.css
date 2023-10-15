@@ -3,57 +3,185 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+
+    --primary: 240 5.9% 10%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 240 10% 3.9%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 5.9% 10%;
+
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+  }
+
+  body {
+    @apply bg-primary;
+  }
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+
+    --primary: 240 5.9% 10%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 240 10% 3.9%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 5.9% 10%;
+
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+  }
+
   body {
     font-size: 1rem;
     box-sizing: border-box;
-    position:relative;
-    overflow-x:hidden;
-    background:white;
-    @apply font-sen;
-   
-
+    position: relative;
+    overflow-x: hidden;
+    background: white;
+    @apply bg-background font-sen;
   }
 
-  .display{
-    @apply  font-bold text-black text-2xl md:text-3xl lg:text-[56px] xl:leading-[64px] lg:-tracking-[2px];
+  .display {
+    @apply font-bold text-black text-2xl md:text-3xl lg:text-[56px] xl:leading-[64px] lg:-tracking-[2px];
   }
-  h1{
-    @apply  font-sen text-black font-bold text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl xl:leading-[64px] lg:-tracking-[2px];
+  h1 {
+    @apply font-sen text-black font-bold text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl xl:leading-[64px] lg:-tracking-[2px];
   }
-  h2{
+  h2 {
     @apply font-sen text-black font-bold text-xl sm:text-2xl lg:text-4xl xl:leading-[48px] lg:-tracking-[2px];
   }
-  h3{
+  h3 {
     @apply font-sen text-black font-bold text-base lg:text-xl xl:text-[28px] leading-10 lg:-tracking-[1px];
   }
-  h4{
-    @apply font-sen text-black font-bold text-base md:text-xl lg:text-2xl leading-8  ;
+  h4 {
+    @apply font-sen text-black font-bold text-base md:text-xl lg:text-2xl leading-8;
   }
-  h5{
+  h5 {
     @apply text-black  font-bold text-xl leading-8;
   }
-  h6{
-    @apply font-bold text-black text-base leading-6 ;
+  h6 {
+    @apply font-bold text-black text-base leading-6;
   }
-  .b1{
+  .b1 {
     @apply font-inter text-black font-normal text-sm md:text-base leading-7;
   }
-  .bg-style{
+  .bg-style {
     @apply bg-cover bg-center bg-no-repeat;
   }
-  .sb{
+  .sb {
     @apply border border-red-600;
   }
-  .button{
-    @apply py-4 px-12 font-bold font-sen text-lg leading-6 ;
+  .button {
+    @apply py-4 px-12 font-bold font-sen text-lg leading-6;
   }
-  .p_text{
+  .p_text {
     @apply font-inter text-black text-sm lg:text-base font-medium lg:tracking-[3px] leading-5 uppercase;
   }
-  p{
+  p {
     @apply font-inter text-mediumgray text-base font-normal leading-7;
   }
-  .l1{
+  .l1 {
     @apply font-inter text-black  text-sm font-medium leading-10;
   }
 }
@@ -61,16 +189,15 @@
 .container {
   margin: 0 auto;
   width: calc(100% - 40px);
-  max-width:1280px;
-
+  max-width: 1280px;
 }
-@media (min-width:640px){
-  .container{
-    width:calc(100% - 60px);
+@media (min-width: 640px) {
+  .container {
+    width: calc(100% - 60px);
   }
 }
-@media (min-width:960px){
-  .container{
-    width:calc(100% - 80px);
+@media (min-width: 960px) {
+  .container {
+    width: calc(100% - 80px);
   }
 }
